@@ -14,7 +14,9 @@ export function NewGroup(){
           title="Nova turma"
           subtitle="Crie a turma para adicionar as pesssoas"
         />
-        <Input />
+        <Input 
+          placeholder="Nome da turma"
+        />
         <Button 
           title="Criar"
           style={{ marginTop: 20 }}
