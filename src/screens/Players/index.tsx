@@ -3,13 +3,15 @@ import { Header } from "@components/Header";
 import { Input } from "@components/input";
 import { Filter } from "@components/Filter";
 import { ButtonIcon } from "@components/Buttonicon";
+import { PlayerCard } from "@components/PlayerCard";
 import { Highlight } from "@components/Highlight";
 import { Container, Form, HeaderList, NumbersOfPlayers } from "./styles";
 import { useState } from "react";
 
+
 export function Players(){
   const [team, setTeam] = useState('Time A');
-  const [players, setPlayers] = useState([]);
+  const [players, setPlayers] = useState(['Ranyery', 'Players']);
 
   return(
     <Container>
@@ -47,6 +49,17 @@ export function Players(){
         {players.length}
       </NumbersOfPlayers>
     </HeaderList>
+
+    <FlatList 
+      data={players}
+      keyExtractor={item => item}
+      renderItem={({ item }) => (
+        <PlayerCard 
+          name={item}
+          onRemove={() => {}}
+        />
+      )}
+    />
 
     </Container>
   );
