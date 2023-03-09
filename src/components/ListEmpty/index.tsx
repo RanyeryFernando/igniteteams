@@ -4,12 +4,10 @@ type Props = {
   message: string;
 }
 
-export function ListEmpyt({ message}: Props) {
-  return(
+export function ListEmpty({ message }: Props) {
+  return (
     <Container>
-      <Message>
-        {message}
-      </Message>
+      <Message>{message}</Message>
     </Container>
-  );
+  )
 }
